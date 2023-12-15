@@ -1,16 +1,6 @@
 import './bootstrap';
 import { createApp } from 'vue';
-import AddToCart from './components/AddToCart.vue';
+import App from './components/App.vue';
+import router from './router/index.js';
 
-import Alpine from 'alpinejs';
-
-window.Alpine = Alpine;
-
-Alpine.start();
-
-export default {
-  components: {
-    'add-to-cart': AddToCart,
-  },
-};
-createApp(AddToCart).mount("#app")
+createApp(App).use(router).mount('#app');
